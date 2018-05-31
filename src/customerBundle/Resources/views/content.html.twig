@@ -1,0 +1,324 @@
+	<div class="ui container fluid">
+			<div class="ui top banner test ad" data-text="Panorama" style="width: 100%;">
+				<img src="#" alt="" style="width: 100%;">
+			</div>
+		</div>
+  <hr>
+	<div class="ui container">
+		<div class="ui stackable two column grid">
+		  <div class="four wide column">
+		  	{# filter for price #}
+			<div class="ui floating dropdown labeled icon button">
+			  <i class="filter icon"></i>
+			  <span class="text">Filter By</span>
+			  <div class="menu">
+			    <div class="scrolling menu">
+			      <div class="item">
+			        <div class="ui red empty circular label"></div>
+			        Newest First
+			      </div>
+			      <div class="item">
+			        <div class="ui red empty circular label"></div>
+			        Oldest First
+			      </div>
+			      <div class="item">
+			        <div class="ui blue empty circular label"></div>
+			        Price: High to Low
+			      </div>
+			      <div class="item">
+			        <div class="ui black empty circular label"></div>
+			        Price: Low to high
+			      </div>
+			      		      
+			    </div>
+			  </div>
+			</div>
+			<br><br>
+
+		  	{# filter for price ends here #}
+		  <div class="ui styled accordion" id="newfill">
+			  <div class="title">
+			    <i class="dropdown icon"></i>
+			    Category
+			  </div>
+			  <div class="content">
+			  	<div class="transition hidden">
+
+				    <div class="ui list">
+				    	{% if categories is defined and categories is not empty %}
+				    		{% for key,item in  categories%}
+				      
+							<div class="grouped fields">
+								<div class="field">
+									<div class="ui radio checkbox">
+										<input type="radio" name="category" value="{{key}}"  categoryName="{{item}}">
+										<label>{{item}}</label>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+						{% endif %}
+						
+															
+						
+						</div>  
+			    </div>	
+					  
+							
+			  </div>	    
+			  		  
+			  <div class="title">
+			    <i class="dropdown icon"></i>
+			    Brands
+			  </div>
+			  <div class="content">
+			    	<div class="transition hidden">
+				    <div class="ui list" id="brand">
+				    	{% if brands is defined and brands is not empty %}
+				    		{% for key,item in  brands %}
+				      <div class="ui checkbox item">
+						  <input name="brand" type="checkbox" id="{{item.brandId}}" value="{{item.brandId}}" categoryId="{{item.categoryId }}">
+						  <label>{{item.brandName}}</label>
+					  	</div>
+					 
+					   {% endfor %}
+					{% endif %}
+					</div>
+
+				</div>
+			  </div>
+			  <div class="title">
+			    <i class="dropdown icon"></i>
+			    Size
+			  </div>
+			  <div class="content">
+			    <div class="transition hidden">
+							<div class="ui list" id="size">
+								
+									<!-- <div class="ui checkbox item">
+										<input type="checkbox" value="1" categoryId="">
+										<label>XL</label>
+									</div> -->
+									
+							</div>  
+				  </div>
+			  </div>
+			</div>
+			<br><br>
+			{# <div class="ui styled accordion">
+			  <div class="title">
+			    <i class="dropdown icon"></i>
+			    Category
+			  </div>
+			  <div class="content">
+			  	<div class="transition hidden">
+				    <div class="ui list">
+				      <div class="ui checkbox item">
+						  <input name="example" type="checkbox">
+						  <label>Electronics</label>
+					  </div>
+					  <div class="ui checkbox item">
+						  <input name="example" type="checkbox">
+						  <label>Clothing</label>
+					  </div>
+					  <div class="ui checkbox item">
+						  <input name="example" type="checkbox">
+						  <label>Jewellery</label>
+					  </div>
+					  <div class="ui checkbox item">
+						  <input name="example" type="checkbox">
+						  <label>Books</label>
+					  </div>
+					</div>  
+				</div>		
+			  </div>	    
+			    
+			  
+			  <div class="title">
+			    <i class="dropdown icon"></i>
+			    Brands
+			  </div>
+			  <div class="content">
+			    	<div class="transition hidden">
+				    <div class="ui list">
+				      <div class="ui checkbox item">
+						  <input name="example" type="checkbox">
+						  <label>Electronics</label>
+					  </div>
+					  <div class="ui checkbox item">
+						  <input name="example" type="checkbox">
+						  <label>Clothing</label>
+					  </div>
+					  <div class="ui checkbox item">
+						  <input name="example" type="checkbox">
+						  <label>Jewellery</label>
+					  </div>
+					  <div class="ui checkbox item">
+						  <input name="example" type="checkbox">
+						  <label>Books</label>
+					  </div>
+					</div>  
+				</div>
+			  </div>
+			  <div class="title">
+			    <i class="dropdown icon"></i>
+			    Size
+			  </div>
+			  <div class="content">
+			    <div class="transition hidden">
+				    <div class="ui list">
+				      <div class="ui checkbox item">
+						  <input name="example" type="checkbox">
+						  <label>Electronics</label>
+					  </div>
+					  <div class="ui checkbox item">
+						  <input name="example" type="checkbox">
+						  <label>Clothing</label>
+					  </div>
+					  <div class="ui checkbox item">
+						  <input name="example" type="checkbox">
+						  <label>Jewellery</label>
+					  </div>
+					  <div class="ui checkbox item">
+						  <input name="example" type="checkbox">
+						  <label>Books</label>
+					  </div>
+					</div>  
+				</div>
+			  </div>
+			</div> #}
+		  </div>
+		  <div class="twelve wide column">
+		  	<div class="ui three stackable cards" id="productsDiv">
+			{% for product in products %}
+			    <div class="card" id="{{product.productId}}">
+				  <div class="image">
+				    <img src='{{ asset("bundles/customerBundle/") ~ product.productImg}}' style="width: 245px; height:200px">
+				    
+				  </div>
+				  <div class="content">
+				    <a class="header">{{product.productName}}</a>
+				    <div class="meta">
+				      <span class="">{{product.productPrice}}</span>
+				      <span class="">{{product.productPrice}}</span>
+				    </div>				    
+				  </div>
+				  <div class="extra content">
+				    <div class="ui two buttons">
+				        <a class="ui green button" id="{{product.productId}}"><i class="shop small icon"></i>Add to Cart</a>
+								<a href="{{path('products',{ 'id': product.productId })}}" id="{{product.productId}}" class="ui teal button">Buy</a>
+
+			      	</div>
+				  </div>
+				</div>
+			{% endfor %}
+		  		
+				{# <div class="card">
+				  <div class="image">
+				    <img src="{{asset('bundles/customerBundle/images/iphone.jpg')}}">
+				  </div>
+				  <div class="content">
+				    <a class="header">Iphone7</a>
+				    <div class="meta">
+				      <span class="date">128 GB</span>
+				    </div>				    
+				  </div>
+				  <div class="extra content">
+				    <div class="ui two buttons">
+				        <div class="ui green button"><i class="shop small icon"></i>Add to cart</div>
+				        <div class="ui teal button">Buy Now</div>
+			      	</div>
+				  </div>
+				</div> #}
+				{# <div class="card">
+				  <div class="image">
+				    <img src="{{asset('bundles/customerBundle/images/iphone.jpg')}}">
+				  </div>
+				  <div class="content">
+				    <a class="header">Iphone7</a>
+				    <div class="meta">
+				      <span class="date">128 GB</span>
+				    </div>				    
+				  </div>
+				  <div class="extra content">
+				    <div class="ui two buttons">
+				        <div class="ui green button"><i class="shop large icon"></i>Add to cart</div>
+				        <div class="ui teal button">Buy Now</div>
+			      	</div>
+				  </div>
+				</div> #}
+				<!-- first row break -->
+				{# <div class="card">
+				  <div class="image">
+				    <img src="{{asset('bundles/customerBundle/images/iphone.jpg')}}">
+				  </div>
+				  <div class="content">
+				    <a class="header">Iphone7</a>
+				    <div class="meta">
+				      <span class="date">128 GB</span>
+				    </div>				    
+				  </div>
+				  <div class="extra content">
+				    <div class="ui two buttons">
+				        <div class="ui green button"><i class="shop small icon"></i>Add to cart</div>
+				        <div class="ui teal button">Buy Now</div>
+			      	</div>
+				  </div>
+				</div>
+				<div class="card">
+				  <div class="image">
+				    <img src="{{asset('bundles/customerBundle/images/iphone.jpg')}}">
+				  </div>
+				  <div class="content">
+				    <a class="header">Iphone7</a>
+				    <div class="meta">
+				      <span class="date">128 GB</span>
+				    </div>				    
+				  </div>
+				  <div class="extra content">
+				    <div class="ui two buttons">
+				        <div class="ui green button"><i class="shop small icon"></i>Add to cart</div>
+				        <div class="ui teal button">Buy Now</div>
+			      	</div>
+				  </div>
+				</div>
+				<div class="card">
+				  <div class="image">
+				    <img src="{{asset('bundles/customerBundle/images/iphone.jpg')}}">
+				  </div>
+				  <div class="content">
+				    <a class="header">Iphone7</a>
+				    <div class="meta">
+				      <span class="date">128 GB</span>
+				    </div>				    
+				  </div>
+				  <div class="extra content">
+				    <div class="ui two buttons">
+				        <div class="ui green button"><i class="shop small icon"></i>Add to cart</div>
+				        <div class="ui teal button">Buy Now</div>
+			      	</div>
+				  </div>
+				</div> #}
+			</div>
+			<!-- product grid end here -->
+			<br><br>
+			<div class="pagin">
+			
+				<div class="ui pagination menu">
+			        <a class="icon item">
+			          <i class="left chevron icon"></i>
+			        </a>
+			        <a class="item">1</a>
+			        <a class="item">2</a>
+			        <a class="item">3</a>
+			        <a class="item">4</a>
+			        <a class="icon item">
+			          <i class="right chevron icon"></i>
+			        </a>
+		      	</div>
+			</div>
+		  </div>	
+		</div>	
+	</div>
+	
+	

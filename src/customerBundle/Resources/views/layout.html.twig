@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>Symantic Sandbox</title>
+      <link href="{{asset('bundles/customerBundle/css/semantic.min.css')}}" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Jura:100,300,400,500,600,700" rel="stylesheet">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="{{asset('bundles/customerBundle/css/main.css')}}">
+
+      
+  </head>
+
+  <body>
+  <div id="desktop">
+    <script>
+      var strcategory  = '{{url("category")}}';
+      var strbrand  = '{{url("brand")}}';
+      var strcart= '{{url("cart")}}';
+      var strbrproduct= '{{url("product")}}';
+      var strcontents= '{{url("contents")}}';
+      
+      
+         
+    </script>
+    <div class="loader">
+      
+    </div>
+	
+	{# Header starts from here #}
+  {% block header %}
+    {% if loginUser is defined and loginUser is not empty %}
+
+      {{ render(controller('customerBundle:Default:header', { 'loginUser':  loginUser })) }}
+
+      {% else %}
+
+      
+   {{ render(controller('customerBundle:Default:header')) }}
+
+    {% endif %}
+    
+  {% endblock %}
+    {# Header Ends Here #}
+
+  	{% block content %}
+     
+    
+    {{ render(controller('customerBundle:Default:content')) }}  
+
+  
+
+	 
+	{% endblock %}
+	
+	{#  footer starts from here #}
+
+	{{ render(controller('customerBundle:Default:footer')) }}
+
+	{# footer ends here   #}
+	
+
+		  	
+		 
+		
+  	<!-- Desktop version -->
+   
+    
+   
+
+    
+  </body>
+</html>  
+

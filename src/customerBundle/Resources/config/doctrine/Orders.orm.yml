@@ -1,0 +1,105 @@
+customerBundle\Entity\Orders:
+    type: entity
+    table: orders
+    id:
+        ordersId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: orders_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        orderUserId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: order_user_id
+        orderAmount:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            comment: ''
+            column: order_amount
+        orderBillingName:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: order_billing_name
+        orderPincode:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: order_pincode
+        orderShipCity:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: order_ship_city
+        orderShipState:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: order_ship_state
+        orderShipLandmark:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: order_ship_landmark
+        orderShipAddress1:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: order_ship_address1
+        orderShipAddress2:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: order_ship_address2
+        orderDate:
+            type: datetime
+            nullable: false
+            comment: ''
+            column: order_date
+        orderTrackingNo:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: order_tracking_no
+        orderPaymentid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: order_paymentid
+        orderCancelled:
+            type: boolean
+            nullable: false
+            comment: ''
+            column: order_cancelled
+        orderCancelledId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: order_cancelled_id
+    lifecycleCallbacks: {  }

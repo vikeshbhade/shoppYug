@@ -1,0 +1,22 @@
+customerBundle\Entity\OptionsGroup:
+    type: entity
+    table: options_group
+    id:
+        optionsGroupId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: options_group_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        optionsGroupName:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: options_group_name
+    lifecycleCallbacks: {  }

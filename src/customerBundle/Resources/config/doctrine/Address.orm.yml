@@ -1,0 +1,59 @@
+customerBundle\Entity\Address:
+    type: entity
+    table: address
+    id:
+        addressId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: address_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        userId:
+            type: text
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: user_id
+        zipcode:
+            type: text
+            nullable: false
+            unsigned: false
+            comment: ''
+        city:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        state:
+            type: text
+            nullable: false
+            unsigned: false
+            comment: ''
+        address1:
+            type: text
+            nullable: false
+            unsigned: false
+            comment: ''
+        address2:
+            type: text
+            nullable: false
+            unsigned: false
+            comment: ''
+        landmark:
+            type: text
+            nullable: false
+            unsigned: false
+            comment: ''
+        addressType:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: address_type
+    lifecycleCallbacks: {  }

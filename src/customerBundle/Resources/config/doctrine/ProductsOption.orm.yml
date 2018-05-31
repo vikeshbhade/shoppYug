@@ -1,0 +1,40 @@
+customerBundle\Entity\ProductsOption:
+    type: entity
+    table: products_option
+    id:
+        productsOptionId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: products_option_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        colorId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: color_id
+        productId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: product_id
+        productsSize:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: products_size
+        productPriceIncrement:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            comment: ''
+            column: product_price_increment
+    lifecycleCallbacks: {  }

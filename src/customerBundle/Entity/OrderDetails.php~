@@ -1,0 +1,74 @@
+<?php
+
+namespace customerBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * OrderDetails
+ *
+ * @ORM\Table(name="order_details")
+ * @ORM\Entity
+ */
+class OrderDetails
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="order_details_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $orderDetailsId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="order_number", type="text", nullable=false)
+     */
+    private $orderNumber;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="order_id", type="integer", nullable=false)
+     */
+    private $orderId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="product_name", type="text", nullable=false)
+     */
+    private $productName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="product_id", type="integer", nullable=false)
+     */
+    private $productId;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="product_price", type="float", precision=10, scale=0, nullable=false)
+     */
+    private $productPrice;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tracking_no", type="text", nullable=false)
+     */
+    private $trackingNo;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="delivery_date", type="datetime", nullable=false)
+     */
+    private $deliveryDate;
+
+
+}

@@ -1,0 +1,34 @@
+customerBundle\Entity\ServiceMasterModelNo:
+    type: entity
+    table: service_master_model_no
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        productId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: product_id
+        productName:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: product_name
+        modelNo:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: model_no
+    lifecycleCallbacks: {  }

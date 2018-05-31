@@ -1,0 +1,22 @@
+customerBundle\Entity\ProductCategory:
+    type: entity
+    table: product_category
+    id:
+        categoryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: category_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        categoryName:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: category_name
+    lifecycleCallbacks: {  }

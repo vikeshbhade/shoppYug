@@ -1,0 +1,29 @@
+			{% if Data is defined and Data is not empty %}
+			
+			{% for product in Data %}
+				
+			    <div class="card" id="{{product.productId}}">
+				  <div class="image">
+				    
+					<img src='{{ asset("bundles/customerBundle/") ~ product.productImg  }} '> 
+				    
+				  </div>
+				  <div class="content">
+				    <a class="header">{{product.productName}}</a>
+				    <div class="meta">
+				      <span class="">{{product.productPrice}}</span>
+				      <span class="">{{product.productPrice}}</span>
+				    </div>				    
+				  </div>
+				  <div class="extra content">
+				    <div class="ui two buttons">
+				        <a class="ui green button" id="{{product.productId}}"><i class="shop small icon"></i>Add to Cart</a>
+								<a href="{{path('products',{ 'id': product.productId })}}" id="{{product.productId}}" class="ui teal button">Buy</a>
+
+			      	</div>
+				  </div>
+				</div>
+			{% endfor %}
+			{% endif %}
+			
+			

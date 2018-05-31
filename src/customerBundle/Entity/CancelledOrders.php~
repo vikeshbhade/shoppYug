@@ -1,0 +1,67 @@
+<?php
+
+namespace customerBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CancelledOrders
+ *
+ * @ORM\Table(name="cancelled_orders")
+ * @ORM\Entity
+ */
+class CancelledOrders
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="order_id", type="integer", nullable=false)
+     */
+    private $orderId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="order_number", type="integer", nullable=false)
+     */
+    private $orderNumber;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="product_id", type="integer", nullable=false)
+     */
+    private $productId;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="datetime", nullable=false)
+     */
+    private $date;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="refund_eligible", type="boolean", nullable=false)
+     */
+    private $refundEligible;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="refund_id", type="integer", nullable=false)
+     */
+    private $refundId;
+
+
+}

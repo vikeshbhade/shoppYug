@@ -1,0 +1,60 @@
+customerBundle\Entity\OrderDetails:
+    type: entity
+    table: order_details
+    id:
+        orderDetailsId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: order_details_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        orderNumber:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: order_number
+        orderId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: order_id
+        productName:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: product_name
+        productId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: product_id
+        productPrice:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            comment: ''
+            column: product_price
+        trackingNo:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: tracking_no
+        deliveryDate:
+            type: datetime
+            nullable: false
+            comment: ''
+            column: delivery_date
+    lifecycleCallbacks: {  }

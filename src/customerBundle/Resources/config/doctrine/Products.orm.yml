@@ -1,0 +1,118 @@
+customerBundle\Entity\Products:
+    type: entity
+    table: products
+    id:
+        productId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: product_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        sellerId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: seller_id
+        productName:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: product_name
+        modelNo:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: model_no
+        brandId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: brand_id
+        productPrice:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            comment: ''
+            column: product_price
+        productWeight:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: product_weight
+        productDetails:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: product_details
+        productDescription:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: product_description
+        productCategoryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: product_category_id
+        productAddDate:
+            type: date
+            nullable: false
+            comment: ''
+            column: product_add_date
+        productImg:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: product_img
+        productStock:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: product_stock
+        productOfferPrice:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            comment: ''
+            column: product_offer_price
+        productActive:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: product_active
+        colorId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: color_id
+        sizeId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: size_id
+    lifecycleCallbacks: {  }

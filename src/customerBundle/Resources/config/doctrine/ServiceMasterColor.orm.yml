@@ -1,0 +1,28 @@
+customerBundle\Entity\ServiceMasterColor:
+    type: entity
+    table: service_master_color
+    id:
+        optionId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: option_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        optionName:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: option_name
+        optionGroupId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: option_group_id
+    lifecycleCallbacks: {  }

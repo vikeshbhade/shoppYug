@@ -1,0 +1,28 @@
+{% if data is defined and data is not empty %}
+    {% for data in data %}
+        <tr class="tr_{{data.productId}}">
+            <td>
+                <div class="ui horizontal list">
+                        <div class="item">
+                            
+                            <img class="ui tiny image" src="{{ asset("bundles/customerBundle/") ~ data.productImg}}">
+                            
+                            <div class="content">
+                                <div class="header"><a href="{{path('products',{ 'id': data.productId })}}">{{data.productName}}</a></div>
+                                <div class="description">{{data.size}} GB</div>
+                                <div class="extra">{{data.color}}</div>
+                            </div>
+                    </div>
+                </div>
+            </td>
+            <td>{{data.quantity}}</td>
+            <td>{{data.price}}</td>
+            <td>{{data.totalPrice}}</td>
+            <td class="right aligned">
+                <a href="#" id="{{data.productId}}" class="delete-btn">Delete</a>
+            </td>
+        </tr>
+
+    {% endfor %}
+
+{% endif %}

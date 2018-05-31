@@ -1,0 +1,25 @@
+customerBundle\Entity\OptionSize:
+    type: entity
+    table: option_size
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        size:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        optionGroupId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: option_group_id
+    lifecycleCallbacks: {  }

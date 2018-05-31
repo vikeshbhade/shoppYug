@@ -1,0 +1,46 @@
+<?php
+
+namespace customerBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ServiceMasterProduct
+ *
+ * @ORM\Table(name="service_master_product")
+ * @ORM\Entity
+ */
+class ServiceMasterProduct
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="productname", type="text", nullable=false)
+     */
+    private $productname;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="isactive", type="boolean", nullable=false)
+     */
+    private $isactive;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="date", nullable=false)
+     */
+    private $date;
+
+
+}

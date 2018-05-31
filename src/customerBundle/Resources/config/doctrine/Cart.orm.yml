@@ -1,0 +1,81 @@
+customerBundle\Entity\Cart:
+    type: entity
+    table: cart
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        productId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: product_id
+        productName:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: product_name
+        size:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: size
+        quantity:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        color:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        price:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        coupon:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        totalPrice:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            comment: ''
+            column: total_price
+        userId:
+            type: text
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: user_id
+        ip:
+            type: text
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: ip
+        productImg:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: product_img
+    lifecycleCallbacks: {  }

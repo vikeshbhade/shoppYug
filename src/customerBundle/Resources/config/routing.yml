@@ -1,0 +1,48 @@
+index:
+    path:     /
+    defaults: { _controller: customerBundle:Default:index }
+# login:
+#     path:     /login
+#     defaults: { _controller: customerBundle:register:login }
+products:
+    path:     /products
+    defaults: { _controller: customerBundle:Default:products }
+shipping:
+    path:     /shipping
+    defaults: { _controller: customerBundle:order:shipping }
+order:
+    path:     /order
+    defaults: { _controller: customerBundle:order:index }
+signin:
+    path:     /signin
+    defaults: { _controller: customerBundle:register:signin }
+signup:
+    path:     /signup
+    defaults: { _controller: customerBundle:register:signup }
+logout:
+    path:     /logout
+    defaults: { _controller: customerBundle:register:logout }
+category:
+    path:     /category
+    defaults: { _controller: customerBundle:Default:category }
+payment:
+    path:     /payment
+    defaults: { _controller: customerBundle:order:payment }
+review:
+    path:     /review
+    defaults: { _controller: customerBundle:order:review }
+brand:
+    path:     /brand
+    defaults: { _controller: customerBundle:Default:brand }
+cart:
+    path:     /cart
+    defaults: { _controller: customerBundle:Default:cart }
+product:
+    path:     /product
+    defaults: { _controller: customerBundle:Default:product }
+contents:
+    path:     /contents
+    defaults: { _controller: customerBundle:Default:contents }
+saveShipping:
+    path:     /saveShipping
+    defaults: { _controller: customerBundle:order:saveShipping }

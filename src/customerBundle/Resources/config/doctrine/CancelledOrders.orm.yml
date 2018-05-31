@@ -1,0 +1,47 @@
+customerBundle\Entity\CancelledOrders:
+    type: entity
+    table: cancelled_orders
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        orderId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: order_id
+        orderNumber:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: order_number
+        productId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: product_id
+        date:
+            type: datetime
+            nullable: false
+            comment: ''
+        refundEligible:
+            type: boolean
+            nullable: false
+            comment: ''
+            column: refund_eligible
+        refundId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: refund_id
+    lifecycleCallbacks: {  }

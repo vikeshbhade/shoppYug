@@ -1,0 +1,74 @@
+<?php
+
+namespace customerBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Users
+ *
+ * @ORM\Table(name="users")
+ * @ORM\Entity
+ */
+class Users
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $userId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user_email", type="text", nullable=false)
+     */
+    private $userEmail;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user_password", type="text", nullable=false)
+     */
+    private $userPassword;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="user_active", type="boolean", nullable=false)
+     */
+    private $userActive;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user_mobile", type="integer", nullable=true)
+     */
+    private $userMobile;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user_ip", type="text", nullable=false)
+     */
+    private $userIp;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="user_verified", type="boolean", nullable=false)
+     */
+    private $userVerified;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user_alt_no", type="integer", nullable=true)
+     */
+    private $userAltNo;
+
+
+}

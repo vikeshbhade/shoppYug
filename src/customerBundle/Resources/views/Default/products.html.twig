@@ -1,0 +1,176 @@
+{% extends "customerBundle::layout.html.twig" %}
+
+{% block content %}
+<!-- Navigation and Carousel -->
+
+	
+{% for item in entities %}
+		
+	<div class="ui container" id="product">
+		<div class="ui stackable three column grid">
+			<div class="ui twelve wide column">
+				<div class="ui items">
+				  <div class="item">
+				    <div class="image">
+				      <img src="{{asset('bundles/customerBundle/images/iphone.jpg')}}" class="ui large image">
+				    </div>
+				    <div class="content">
+				      <a class="header">{{item.productName}}</a>
+				      <div class="meta">
+				        <span>{{item.size}}</span>
+				      </div>
+				      <div class="description">
+				        <div class="ui selection dropdown">
+						  <input name="gender" type="hidden">
+						  <i class="dropdown icon"></i>
+						  <div class="default text">{{item.optionName}}</div>
+						  <div class="menu">
+						    <div class="item" data-value="1">Grey</div>
+						    <div class="item" data-value="2">Black</div>
+						  </div>
+						</div>
+				
+				      </div>
+				      <div class="extra">
+				      	<div class="ui selection dropdown">
+						  <input name="gender" type="hidden">
+						  <i class="dropdown icon"></i>
+						  <div class="default text">{{item.size}}</div>
+						  <div class="menu">
+						    <div class="item" data-value="1">64</div>
+						    <div class="item" data-value="2">128</div>
+						  </div>
+						</div>
+				      	
+				      </div>
+				      <div class="extra">
+				      	
+						<div class="ui star rating" data-rating="3" data-max-rating="5">
+
+				      	</div><br><br>
+				      	<div class="ui buttons">
+						  <button class="ui green button" id="{{item.productId}}">Add to Cart</button>
+						  <div class="or"></div>
+						  <a href="{{path('order')}}">  <button class="ui teal button"> Buy </button> </a>
+						</div>
+				      	
+				      </div>
+				        
+				      
+				    </div>
+				  </div>
+				</div>
+			</div>  
+				
+			<div class="ui four wide column">
+				<div class="ui card">
+				  <div class="content">
+				    <div class="header">PVG Enterprise</div>
+				    <div class="meta">Seller from 2015</div>
+				    <div class="description">
+				      <p>We deal in all products in Retail.</p>
+				    </div>
+				  </div>
+				  <div class="extra content">
+				    <i class="check icon"></i>
+				    99% Approval Ratings
+				  </div>
+				</div>
+				
+			</div>
+		</div>
+		<br><br>
+		<div class="description">
+			<div class="ui three item menu">
+			  <a class="item active" id="description">Item Descriptions</a>
+			  <a class="item" id="specs">Detailed Specs</a>
+			  <a class="item" id="reviews">User reviews</a>
+			</div>
+			<div class="ui segment">
+			  <div class="detail">
+			  	<div class="ui list">
+				  <div class="item"> 12MP primary camera with optical image stabilisation, quad-LED true tone flash and live photos, 4K video recording at 30 fps and slow-motion video recording in 1080p at 120 fps and 7MP front facing camera</div>
+				  <div class="item"> 11.93 centimeters (4.7-inch) Retina HD 3D-touch capacitive touchscreen with 750 x 1334 pixels resolution iOS v10.0.1 operating system with 1.3GHz A10 Fusion chip with integrated M10 motion quad core processor, 2GB RAM, 32GB internal memory and single SIM 1960mAH lithium-ion battery</div>
+				  <div class="item">1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase</div>
+				</div>
+			  </div>
+			  <div class="techspecs">
+				<table class="ui celled table">
+				  <thead>
+				    <tr><th>Specifications</th>
+				    <th>Details</th>
+				    
+				  </tr></thead>
+				  <tbody>
+				    <tr>
+				      <td>
+				        First
+				      </td>
+				      <td>Cell</td>
+				      
+				    </tr>
+				    
+				    
+				  </tbody>
+				 
+				</table>
+			  </div>
+			  <div class="user">
+				<div class="ui comments">
+				  <h3 class="ui dividing header">Comments</h3>
+				  <div class="comment">
+				    <a class="avatar">
+				      <img src="/images/avatar/small/matt.jpg">
+				    </a>
+				    <div class="content">
+				      <a class="author">Avit</a>
+				      <div class="metadata">
+				        <span class="date">Today at 5:42PM</span>
+				      </div>
+				      <div class="text">
+				        <p>Nice Phone!</p>
+				      </div>
+				      <div class="actions">
+				        <a class="reply">Like</a>
+				        <a class="reply">Helpful</a>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="comment">
+				    <a class="avatar">
+				      <img src="/images/avatar/small/elliot.jpg">
+				    </a>
+				    <div class="content">
+				      <a class="author">Pratik</a>
+				      <div class="metadata">
+				        <span class="date">Yesterday at 12:30AM</span>
+				      </div>
+				      <div class="text">
+				        <p>This has been very useful phone! Purchasing Iphone X in few months</p>
+				      </div>
+				      <div class="actions">
+				        <a class="reply">like</a>
+				        <a class="reply">Helpful</a>
+
+				      </div>
+				    </div>
+				    
+				  </div>
+				  
+				  <form class="ui reply form">
+				    <div class="field">
+				      <textarea></textarea>
+				    </div>
+				    <div class="ui blue labeled submit icon button">
+				      <i class="icon edit"></i> Add Reply
+				    </div>
+				  </form>
+				</div>
+			  </div>		
+			</div>
+			
+		</div>
+	</div>
+{% endfor %}
+
+{% endblock %}	

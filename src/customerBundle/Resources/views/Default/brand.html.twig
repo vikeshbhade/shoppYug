@@ -1,0 +1,12 @@
+{% if arrData is defined and arrData  is not empty %}
+    {% for data in arrData %}
+        
+           <div class="ui checkbox item">
+                <input name="brand" type="checkbox" id="{{data.id}}" value="{{data.id}}" categoryId="{{data.id}}">
+                <label>{{data.name}}</label>
+            </div>
+        {% endfor %}
+    
+{% endif %}
+
+

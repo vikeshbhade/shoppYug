@@ -1,0 +1,53 @@
+<?php
+
+namespace customerBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ProductsOption
+ *
+ * @ORM\Table(name="products_option")
+ * @ORM\Entity
+ */
+class ProductsOption
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="products_option_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $productsOptionId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="color_id", type="integer", nullable=false)
+     */
+    private $colorId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="product_id", type="integer", nullable=false)
+     */
+    private $productId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="products_size", type="integer", nullable=false)
+     */
+    private $productsSize;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="product_price_increment", type="float", precision=10, scale=0, nullable=false)
+     */
+    private $productPriceIncrement;
+
+
+}

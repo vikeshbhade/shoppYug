@@ -1,0 +1,31 @@
+customerBundle\Entity\Brand:
+    type: entity
+    table: brand
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        categoryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: category_id
+        active:
+            type: boolean
+            nullable: false
+            comment: ''
+            default: '1'
+    lifecycleCallbacks: {  }

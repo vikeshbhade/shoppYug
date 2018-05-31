@@ -1,0 +1,81 @@
+<?php
+
+namespace customerBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Address
+ *
+ * @ORM\Table(name="address")
+ * @ORM\Entity
+ */
+class Address
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="address_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $addressId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user_id", type="integer", nullable=false)
+     */
+    private $userId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="zipcode", type="integer", nullable=false)
+     */
+    private $zipcode;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="city", type="text", nullable=false)
+     */
+    private $city;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="state", type="integer", nullable=false)
+     */
+    private $state;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="address1", type="integer", nullable=false)
+     */
+    private $address1;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="address2", type="integer", nullable=false)
+     */
+    private $address2;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="landmark", type="integer", nullable=false)
+     */
+    private $landmark;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="address_type", type="text", nullable=false)
+     */
+    private $addressType;
+
+
+}

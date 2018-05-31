@@ -1,0 +1,123 @@
+<?php
+
+namespace customerBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Orders
+ *
+ * @ORM\Table(name="orders")
+ * @ORM\Entity
+ */
+class Orders
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="orders_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $ordersId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="order_user_id", type="integer", nullable=false)
+     */
+    private $orderUserId;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="order_amount", type="float", precision=10, scale=0, nullable=false)
+     */
+    private $orderAmount;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="order_billing_name", type="text", nullable=false)
+     */
+    private $orderBillingName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="order_pincode", type="integer", nullable=false)
+     */
+    private $orderPincode;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="order_ship_city", type="text", nullable=false)
+     */
+    private $orderShipCity;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="order_ship_state", type="text", nullable=false)
+     */
+    private $orderShipState;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="order_ship_landmark", type="text", nullable=false)
+     */
+    private $orderShipLandmark;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="order_ship_address1", type="text", nullable=false)
+     */
+    private $orderShipAddress1;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="order_ship_address2", type="text", nullable=false)
+     */
+    private $orderShipAddress2;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="order_date", type="datetime", nullable=false)
+     */
+    private $orderDate;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="order_tracking_no", type="text", nullable=false)
+     */
+    private $orderTrackingNo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="order_paymentid", type="integer", nullable=false)
+     */
+    private $orderPaymentid;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="order_cancelled", type="boolean", nullable=false)
+     */
+    private $orderCancelled;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="order_cancelled_id", type="integer", nullable=false)
+     */
+    private $orderCancelledId;
+
+
+}

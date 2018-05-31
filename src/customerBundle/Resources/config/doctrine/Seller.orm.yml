@@ -1,0 +1,46 @@
+customerBundle\Entity\Seller:
+    type: entity
+    table: seller
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        address:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        regNo:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: reg_no
+        date:
+            type: date
+            nullable: false
+            comment: ''
+        rating:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        info:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+    lifecycleCallbacks: {  }

@@ -1,0 +1,138 @@
+{% extends "customerBundle::layout.html.twig" %}
+
+{% block content %}
+    	<div class="ui container" id="revieworder">
+		<div class="ui segment">
+			<div class="ui three top attached steps">
+			  <div class="step">
+			    <i class="truck icon"></i>
+			    <div class="content">
+			      <div class="title">Shipping</div>
+			      <div class="description">Choose your shipping options</div>
+			    </div>
+			  </div>
+			  <div class="step">
+			    <i class="payment icon"></i>
+			    <div class="content">
+			      <div class="title">Billing</div>
+			      <div class="description">Enter billing information</div>
+			    </div>
+			  </div>
+			  <div class="active step">
+			    <i class="info icon"></i>
+			    <div class="content">
+			      <div class="title">Confirm Order</div>
+			      <div class="description">Verify order details</div>
+			    </div>
+			  </div>
+			</div>
+			<div class="ui attached segments">
+			  <div class="review-table">			
+				<table class="ui padded table">
+					  <thead>
+					    <tr>
+					      <th>Item</th>
+					      <th>Quantity</th>
+					      <th>Price</th>
+					      <th>Total</th>
+					      <th class="right aligned"></th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <td>
+					      	<div class="ui horizontal list">
+							  <div class="item">
+							    <img class="ui tiny image" src="images/avatar.png">
+							    <div class="content">
+							      <div class="header"><a href="">Iphone</a></div>
+							      <div class="description">128 GB</div>
+							      <div class="extra">Jet Black</div>
+							    </div>
+							  </div>
+							</div>
+					      </td>
+					      <td>1</td>
+					      <td>75000</td>
+					      <td>75000</td>
+					      <td class="right aligned">
+					      	Edit | Delete
+					      </td>
+					    </tr>
+					    
+					  </tbody>
+				</table>
+			  </div>
+			  <br>
+			  <br>
+			  <div class="review-payment">
+			  						
+					<table class="ui basic table">
+					  <tbody>
+					    <tr>
+					      <td></td>
+					      <td></td>
+					      <td>
+					      <i class="payment huge icon"></i>
+					      </td>
+					      <td><h3>Payment Mode</h3></td>
+					      <td><h5>Cash On Delivery</h5></td>
+					    </tr>
+					   	<tr>
+						   	<td></td>
+						   	<td></td>
+					   		<td>
+					   			<i class="shipping huge icon"></i>
+					   			
+					   		</td>
+					   		<td>
+					   			<h3>Shipping Address</h3>
+					   			
+					   		</td>
+					   		<td>
+					   			<address>
+					   				<p>Vikesh Bhade <br>
+					   				86, Dwarkapur <br>
+					   				Rameshwari Ring Road <br>
+					   				Nagpur- 440027 <br>
+					   				Maharashtra
+					   				</p>
+					   			</address>
+					   		</td>
+					   		<td><a href="">Change</a></td>
+
+					   	</tr>
+					   	<tr>
+						   	<td></td>
+						   	<td></td>
+					   		<td>
+					   			<i class="file text outline huge icon"></i>
+					   			
+					   		</td>
+					   		<td>
+					   			<h3>Billing Address</h3>
+					   			
+					   		</td>
+					   		<td>
+					   			<address>
+					   				<p>Vikesh Bhade <br>
+					   				86, Dwarkapur <br>
+					   				Rameshwari Ring Road <br>
+					   				Nagpur- 440027 <br>
+					   				Maharashtra
+					   				</p>
+					   			</address>
+					   		</td>
+					   		<td><a href="">Change</a></td>
+					   	</tr>
+					  </tbody>
+					</table>
+				</div>
+				<div class="ui segment">
+				<div class="ui button" tabindex="0">Back</div>
+				<div class="ui button" tabindex="0">Place Order</div>
+				</div>
+			</div>			
+		</div>
+	</div> 		
+{% endblock %}

@@ -1,0 +1,58 @@
+customerBundle\Entity\Users:
+    type: entity
+    table: users
+    id:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: user_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        userEmail:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: user_email
+        userPassword:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: user_password
+        userActive:
+            type: boolean
+            nullable: false
+            comment: ''
+            column: user_active
+        userMobile:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: user_mobile
+        userIp:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: user_ip
+        userVerified:
+            type: boolean
+            nullable: false
+            comment: ''
+            column: user_verified
+        userAltNo:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: user_alt_no
+    lifecycleCallbacks: {  }

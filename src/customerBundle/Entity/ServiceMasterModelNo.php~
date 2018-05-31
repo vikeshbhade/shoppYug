@@ -1,0 +1,46 @@
+<?php
+
+namespace customerBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ServiceMasterModelNo
+ *
+ * @ORM\Table(name="service_master_model_no")
+ * @ORM\Entity
+ */
+class ServiceMasterModelNo
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="product_id", type="integer", nullable=false)
+     */
+    private $productId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="product_name", type="text", nullable=false)
+     */
+    private $productName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="model_no", type="text", nullable=false)
+     */
+    private $modelNo;
+
+
+}

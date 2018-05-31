@@ -1,0 +1,39 @@
+<?php
+
+namespace customerBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * OptionSize
+ *
+ * @ORM\Table(name="option_size")
+ * @ORM\Entity
+ */
+class OptionSize
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="size", type="integer", nullable=false)
+     */
+    private $size;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="option_group_id", type="integer", nullable=false)
+     */
+    private $optionGroupId;
+
+
+}
