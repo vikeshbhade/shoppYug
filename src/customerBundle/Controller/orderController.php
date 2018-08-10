@@ -74,7 +74,6 @@ class orderController extends Controller
                 $Addressobj->setAddressType($userId);
             }
         }
-		prx(2);
 	}
 }
    
